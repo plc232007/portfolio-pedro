@@ -23,9 +23,9 @@ body.light-theme {
    ============================================================ */
 html.js-reveal .reveal-item {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.75s var(--ease-out) var(--reveal-delay, 0ms),
-    transform 0.75s var(--ease-out) var(--reveal-delay, 0ms);
+  transform: translateY(16px);
+  transition: opacity 0.45s var(--ease-out) var(--reveal-delay, 0ms),
+    transform 0.45s var(--ease-out) var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
 
@@ -35,8 +35,12 @@ html.js-reveal .reveal-item.is-in {
   will-change: auto;
 }
 
+html.js-reveal .reveal-item.reveal-now {
+  transition: none;
+}
+
 html.js-reveal .tl-entry.reveal-item {
-  transform: translateX(-24px);
+  transform: translateX(-14px);
 }
 
 @media (prefers-reduced-motion: reduce) {
