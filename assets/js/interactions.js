@@ -12,30 +12,43 @@
      Sem JS a classe .js-reveal nunca é aplicada e tudo permanece
      visível — o conteúdo jamais fica preso em opacity: 0.
      ============================================================ */
-  const GROUPS = [
-    { sel: ".section-head", stagger: 0 },
-    { sel: ".about-box", stagger: 0 },
-    { sel: ".skill-card", stagger: 110 },
-    { sel: ".tl-entry", stagger: 140 },
-    { sel: ".edu-card", stagger: 110 },
-    { sel: ".projects-subsection-header", stagger: 0 },
-    { sel: ".proj-card", stagger: 90 },
-    { sel: ".contact-wrap", stagger: 0 },
+  const SELECTORS = [
+    ".section-head",
+    ".about-box",
+    ".skill-card",
+    ".tl-entry",
+    ".edu-card",
+    ".projects-subsection-header",
+    ".proj-card",
+    ".contact-wrap",
   ];
+  // Atraso entre itens que entram na tela juntos (ex.: uma fileira de cards).
+  // É calculado por lote, na ordem visual, e não pela posição na página: assim
+  // cards lado a lado aparecem quase juntos, da esquerda para a direita.
+  const STAGGER_MS = 70;
+  const MAX_STEPS = 4;
 
   function initReveal() {
     document.documentElement.classList.add("js-reveal");
 
     const items = [];
-    GROUPS.forEach(({ sel, stagger }) => {
-      document.querySelectorAll(sel).forEach((el, i) => {
+    SELECTORS.forEach((sel) => {
+      document.querySelectorAll(sel).forEach((el) => {
         el.classList.add("reveal-item");
-        if (stagger) el.style.setProperty("--reveal-delay", `${(i % 6) * stagger}ms`);
         items.push(el);
       });
     });
 
-    const show = (el) => el.classList.add("is-in");
+    // Depois que entra, o item perde o atraso para o hover e outros efeitos responderem na hora.
+    const show = (el) => {
+      el.addEventListener("transitionend", () => el.style.removeProperty("--reveal-delay"), { once: true });
+      el.classList.add("is-in");
+    };
+    // Sem transição: desliga por dois quadros e devolve, para o hover dos cards continuar animado.
+    const showNow = (el) => {
+      el.classList.add("reveal-now", "is-in");
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.remove("reveal-now")));
+    };
 
     if (reduced || !("IntersectionObserver" in window)) {
       items.forEach(show);
@@ -44,13 +57,26 @@
 
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          show(entry.target);
-          io.unobserve(entry.target);
+        const batch = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => ({ el: entry.target, box: entry.boundingClientRect }))
+          .sort((a, b) => a.box.top - b.box.top || a.box.left - b.box.left);
+        let step = 0;
+        batch.forEach(({ el, box }) => {
+          io.unobserve(el);
+          // Já está dentro da tela (salto de rolagem, link do menu, End): aparece na hora,
+          // para o card nunca chegar vazio.
+          if (box.top < window.innerHeight * 0.9) {
+            showNow(el);
+            return;
+          }
+          el.style.setProperty("--reveal-delay", `${Math.min(step++, MAX_STEPS) * STAGGER_MS}ms`);
+          show(el);
         });
       },
-      { rootMargin: "0px 0px -12% 0px", threshold: 0.05 }
+      // Rolagem normal: começa a revelar um pouco antes de o item entrar na tela,
+      // então ele já chega visível.
+      { rootMargin: "0px 0px 20% 0px", threshold: 0 }
     );
     items.forEach((el) => io.observe(el));
 
