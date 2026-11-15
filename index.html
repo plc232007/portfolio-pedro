@@ -141,11 +141,6 @@
       <section class="hero workspace-hero" id="inicio" data-nav-label="Home" data-nav-label-pt="Início">
         <div class="container hero-grid">
           <div>
-            <div class="hero-badge">
-              <span class="dot"></span>
-              <span data-pt="Aberto a oportunidades em IA e visão computacional · Brasília, DF">Open to opportunities in AI and computer vision · Brasília, DF</span>
-            </div>
-
             <h1 class="hero-name">Pedro<br /><span>Leite Campos.</span></h1>
 
             <p class="hero-role" data-pt="IA e Visão Computacional · Python">AI and Computer Vision · Python</p>
@@ -182,66 +177,58 @@
               <div class="room-halo" aria-hidden="true"></div>
               <div class="desk-float">
               <div class="desk-scene" id="desk-scene">
-                <div class="desk-shadow" aria-hidden="true"></div>
-                <div class="desk-leg desk-leg-left" aria-hidden="true"></div>
-                <div class="desk-leg desk-leg-right" aria-hidden="true"></div>
-                <div class="desk-surface" aria-hidden="true"></div>
-                <div class="screen-spill" aria-hidden="true"></div>
-                <div class="desk-edge" aria-hidden="true"></div>
-                <div class="desk-mat" aria-hidden="true"></div>
-                <div class="monitor-foot" aria-hidden="true"></div>
-                <div class="monitor-neck" aria-hidden="true"></div>
-                <a class="desk-monitor desk-object" id="desk-monitor" href="#exp-cnt" aria-label="Monitor: visão computacional na Pesquisa CNT de Rodovias">
-                  <div class="monitor-screen" id="monitor-screen" data-mode="cv">
-                    <div class="screen-toolbar"><span>● ● ●</span><span id="screen-path">yolo@cnt: ~/rodovias</span><span>↗</span></div>
-                    <div class="screen-cv">
-                      <span class="screen-kicker">CNT / PESQUISA DE RODOVIAS</span>
-                      <svg class="cv-feed" viewBox="0 0 300 136" aria-hidden="true" focusable="false">
-                        <defs>
-                          <linearGradient id="cv-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d2a1b" /><stop offset="1" stop-color="#1d4a30" /></linearGradient>
-                        </defs>
-                        <rect width="300" height="56" fill="url(#cv-sky)" />
-                        <polygon points="0,56 40,43 90,51 140,39 200,52 250,41 300,50 300,56" fill="#12301f" />
-                        <rect y="56" width="300" height="80" fill="#0b1711" />
-                        <polygon points="138,56 162,56 300,136 0,136" fill="#1b2620" />
-                        <line x1="138" y1="56" x2="12" y2="136" stroke="#7d8f80" stroke-width="1.2" />
-                        <line x1="162" y1="56" x2="288" y2="136" stroke="#7d8f80" stroke-width="1.2" />
-                        <line class="cv-lane" x1="150" y1="58" x2="150" y2="136" stroke="#d9e6c3" stroke-width="2" stroke-dasharray="6 7" />
-                        <g class="cv-car">
-                          <rect x="92" y="94" width="46" height="24" rx="5" fill="#3d5246" />
-                          <rect x="99" y="85" width="32" height="13" rx="4" fill="#2c3e33" />
-                          <rect x="102" y="87" width="26" height="8" rx="2" fill="#9fc7ae" opacity=".45" />
-                          <rect x="95" y="104" width="7" height="4" rx="1" fill="#ffcf7a" />
-                          <rect x="128" y="104" width="7" height="4" rx="1" fill="#ffcf7a" />
-                        </g>
-                        <line x1="250" y1="70" x2="250" y2="104" stroke="#55665a" stroke-width="2" />
-                        <polygon points="250,50 263,70 237,70" fill="#e0b23c" />
-                        <text x="250" y="68" text-anchor="middle" font-size="10" font-weight="700" fill="#2a2208">!</text>
-                        <polyline points="176,121 182,114 188,122 195,115 202,123 210,117" fill="none" stroke="#040806" stroke-width="2.2" />
-                        <g class="cv-det cv-det--car"><rect x="86" y="80" width="58" height="42" pathLength="100" /><rect class="cv-tag" x="86" y="71" width="51" height="9" /><text x="89" y="78" data-pt="veículo 0.94">vehicle 0.94</text></g>
-                        <g class="cv-det cv-det--sign"><rect x="233" y="46" width="34" height="27" pathLength="100" /><rect class="cv-tag" x="224" y="37" width="45" height="9" /><text x="227" y="44" data-pt="placa 0.88">sign 0.88</text></g>
-                        <g class="cv-det cv-det--crack"><rect x="172" y="109" width="42" height="18" pathLength="100" /><rect class="cv-tag" x="172" y="100" width="48" height="9" /><text x="175" y="107" data-pt="trinca 0.81">crack 0.81</text></g>
-                        <rect class="cv-scan" width="300" height="2" />
-                      </svg>
-                      <div class="cv-meta"><span>YOLO · PyTorch · OpenCV</span><span data-pt="demo ilustrativa">illustrative demo</span></div>
+                <!-- Render do Blender (cena/mesa_blender.py). A tela do monitor e os objetos clicáveis são HTML por cima.
+                     Sem fetchpriority no <img>: o Chrome usaria isso para baixar o WebP além do AVIF. -->
+                <picture>
+                  <source type="image/avif" srcset="./assets/img/mesa-708.avif 708w, ./assets/img/mesa.avif 1416w"
+                    sizes="(max-width: 1000px) 92vw, 640px" />
+                  <img class="desk-render" src="./assets/img/mesa.webp"
+                    srcset="./assets/img/mesa-708.webp 708w, ./assets/img/mesa.webp 1416w"
+                    sizes="(max-width: 1000px) 92vw, 640px" width="708" height="600" alt="" />
+                </picture>
+                <div class="desk-light" aria-hidden="true"></div>
+                <a class="desk-monitor" id="desk-monitor" href="#exp-cnt" aria-label="Monitor: training computer vision models at CNT">
+                  <div class="monitor-screen" id="monitor-screen" data-mode="ide">
+                    <div class="screen-toolbar"><span>● ● ●</span><span id="screen-path">pedro@cnt: ~/vision/train.py</span><span>↗</span></div>
+                    <div class="screen-ide" aria-hidden="true">
+                      <div class="ide-code">
+                        <ol id="ide-lines">
+                          <li><span class="ln-text"><span class="kw">import</span> torch</span></li>
+                          <li><span class="ln-text"><span class="kw">from</span> ultralytics <span class="kw">import</span> YOLO</span></li>
+                          <li><span class="ln-text"></span></li>
+                          <li><span class="ln-text"><span class="cm" data-pt="# Pesquisa CNT: placas e trincas"># CNT survey: signs and cracks</span></span></li>
+                          <li><span class="ln-text">model = <span class="fn">YOLO</span>(<span class="st">&quot;yolov8n.pt&quot;</span>)</span></li>
+                          <li><span class="ln-text"></span></li>
+                          <li><span class="ln-text">results = model.<span class="fn">train</span>(</span></li>
+                          <li><span class="ln-text">    data=<span class="st">&quot;rodovias.yaml&quot;</span>,</span></li>
+                          <li><span class="ln-text">    epochs=<span class="nu">50</span>, imgsz=<span class="nu">640</span>,</span></li>
+                          <li><span class="ln-text">    device=<span class="st">&quot;cuda&quot;</span>,</span></li>
+                          <li><span class="ln-text">)</span></li>
+                          <li><span class="ln-text"></span></li>
+                          <li><span class="ln-text">metrics = model.<span class="fn">val</span>()</span></li>
+                          <li><span class="ln-text"><span class="fn">print</span>(metrics.box.map50)</span></li>
+                        </ol>
+                      </div>
+                      <div class="ide-side">
+                        <span class="ide-caption">yolov8n · 3.2M params</span>
+                        <svg class="ide-net" viewBox="0 0 118 58" aria-hidden="true" focusable="false"><g class="net-edges"><line x1="8" y1="16.5" x2="42" y2="12.3"/><line x1="8" y1="16.5" x2="42" y2="20.7"/><line x1="8" y1="16.5" x2="42" y2="29.0"/><line x1="8" y1="16.5" x2="42" y2="37.3"/><line x1="8" y1="16.5" x2="42" y2="45.7"/><line x1="8" y1="29.0" x2="42" y2="12.3"/><line x1="8" y1="29.0" x2="42" y2="20.7"/><line x1="8" y1="29.0" x2="42" y2="29.0"/><line x1="8" y1="29.0" x2="42" y2="37.3"/><line x1="8" y1="29.0" x2="42" y2="45.7"/><line x1="8" y1="41.5" x2="42" y2="12.3"/><line x1="8" y1="41.5" x2="42" y2="20.7"/><line x1="8" y1="41.5" x2="42" y2="29.0"/><line x1="8" y1="41.5" x2="42" y2="37.3"/><line x1="8" y1="41.5" x2="42" y2="45.7"/><line x1="42" y1="12.3" x2="76" y2="12.3"/><line x1="42" y1="12.3" x2="76" y2="20.7"/><line x1="42" y1="12.3" x2="76" y2="29.0"/><line x1="42" y1="12.3" x2="76" y2="37.3"/><line x1="42" y1="12.3" x2="76" y2="45.7"/><line x1="42" y1="20.7" x2="76" y2="12.3"/><line x1="42" y1="20.7" x2="76" y2="20.7"/><line x1="42" y1="20.7" x2="76" y2="29.0"/><line x1="42" y1="20.7" x2="76" y2="37.3"/><line x1="42" y1="20.7" x2="76" y2="45.7"/><line x1="42" y1="29.0" x2="76" y2="12.3"/><line x1="42" y1="29.0" x2="76" y2="20.7"/><line x1="42" y1="29.0" x2="76" y2="29.0"/><line x1="42" y1="29.0" x2="76" y2="37.3"/><line x1="42" y1="29.0" x2="76" y2="45.7"/><line x1="42" y1="37.3" x2="76" y2="12.3"/><line x1="42" y1="37.3" x2="76" y2="20.7"/><line x1="42" y1="37.3" x2="76" y2="29.0"/><line x1="42" y1="37.3" x2="76" y2="37.3"/><line x1="42" y1="37.3" x2="76" y2="45.7"/><line x1="42" y1="45.7" x2="76" y2="12.3"/><line x1="42" y1="45.7" x2="76" y2="20.7"/><line x1="42" y1="45.7" x2="76" y2="29.0"/><line x1="42" y1="45.7" x2="76" y2="37.3"/><line x1="42" y1="45.7" x2="76" y2="45.7"/><line x1="76" y1="12.3" x2="110" y2="20.7"/><line x1="76" y1="12.3" x2="110" y2="37.3"/><line x1="76" y1="20.7" x2="110" y2="20.7"/><line x1="76" y1="20.7" x2="110" y2="37.3"/><line x1="76" y1="29.0" x2="110" y2="20.7"/><line x1="76" y1="29.0" x2="110" y2="37.3"/><line x1="76" y1="37.3" x2="110" y2="20.7"/><line x1="76" y1="37.3" x2="110" y2="37.3"/><line x1="76" y1="45.7" x2="110" y2="20.7"/><line x1="76" y1="45.7" x2="110" y2="37.3"/></g><g class="net-nodes"><circle cx="8" cy="16.5" r="2.6" style="--d:0.00s"/><circle cx="8" cy="29.0" r="2.6" style="--d:0.00s"/><circle cx="8" cy="41.5" r="2.6" style="--d:0.00s"/><circle cx="42" cy="12.3" r="2.6" style="--d:0.35s"/><circle cx="42" cy="20.7" r="2.6" style="--d:0.35s"/><circle cx="42" cy="29.0" r="2.6" style="--d:0.35s"/><circle cx="42" cy="37.3" r="2.6" style="--d:0.35s"/><circle cx="42" cy="45.7" r="2.6" style="--d:0.35s"/><circle cx="76" cy="12.3" r="2.6" style="--d:0.70s"/><circle cx="76" cy="20.7" r="2.6" style="--d:0.70s"/><circle cx="76" cy="29.0" r="2.6" style="--d:0.70s"/><circle cx="76" cy="37.3" r="2.6" style="--d:0.70s"/><circle cx="76" cy="45.7" r="2.6" style="--d:0.70s"/><circle cx="110" cy="20.7" r="2.6" style="--d:1.05s"/><circle cx="110" cy="37.3" r="2.6" style="--d:1.05s"/></g></svg>
+                        <span class="ide-caption"><i class="sw-loss"></i>loss <b id="ide-loss">0.052</b> <i class="sw-map"></i>mAP50 <b id="ide-map">0.87</b></span>
+                        <svg class="ide-chart" viewBox="0 0 120 52" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g class="chart-grid"><line x1="4" y1="6" x2="116" y2="6"/><line x1="4" y1="20" x2="116" y2="20"/><line x1="4" y1="34" x2="116" y2="34"/><line x1="4" y1="48" x2="116" y2="48"/></g><polyline class="chart-loss" id="chart-loss" points="4.0,13.4 6.3,17.9 8.6,21.1 10.9,25.1 13.1,27.4 15.4,30.0 17.7,32.6 20.0,33.8 22.3,36.0 24.6,36.9 26.9,38.6 29.1,39.6 31.4,40.1 33.7,40.4 36.0,41.9 38.3,42.4 40.6,42.4 42.9,42.4 45.1,43.3 47.4,43.9 49.7,43.4 52.0,44.8 54.3,44.0 56.6,44.9 58.9,45.3 61.1,45.5 63.4,45.3 65.7,44.8 68.0,45.7 70.3,45.3 72.6,45.3 74.9,45.7 77.1,45.5 79.4,46.2 81.7,46.2 84.0,46.0 86.3,45.5 88.6,45.8 90.9,46.0 93.1,45.7 95.4,45.9 97.7,46.1 100.0,45.4 102.3,45.6 104.6,46.2 106.9,45.8 109.1,45.8 111.4,45.4 113.7,45.6 116.0,46.1"/><polyline class="chart-map" id="chart-map" points="4.0,43.7 6.3,41.1 8.6,37.7 10.9,34.6 13.1,32.8 15.4,30.2 17.7,28.7 20.0,26.3 22.3,24.6 24.6,23.4 26.9,21.8 29.1,21.3 31.4,19.9 33.7,19.1 36.0,18.3 38.3,17.7 40.6,16.6 42.9,16.0 45.1,15.9 47.4,15.3 49.7,15.4 52.0,14.4 54.3,14.1 56.6,13.5 58.9,13.4 61.1,13.7 63.4,13.4 65.7,12.9 68.0,13.4 70.3,12.8 72.6,13.0 74.9,12.9 77.1,12.8 79.4,12.0 81.7,12.6 84.0,12.4 86.3,12.2 88.6,11.6 90.9,12.4 93.1,11.9 95.4,11.8 97.7,11.4 100.0,11.4 102.3,11.4 104.6,11.9 106.9,11.8 109.1,11.8 111.4,11.2 113.7,11.2 116.0,12.0"/></svg>
+                      </div>
+                      <div class="ide-status"><span>epoch <b id="ide-epoch">50</b>/50</span><span class="ide-bar" id="ide-bar">████████████</span><span>cuda:0</span></div>
                     </div>
                     <div class="screen-body" hidden>
                       <span class="screen-kicker">PROJECT / <span id="screen-number">01</span></span>
                       <strong id="screen-title">LVM</strong>
                       <p id="screen-description">Interactive geometry with seed-generated exercises and an AI assistant.</p>
-                      <div class="screen-terminal" aria-hidden="true"><span><b>❯</b> python <em>train.py</em> --model plc-net</span><span>epoch <em id="train-epoch">20</em>/20 <b id="train-progress">██████████</b> loss <em id="train-loss">0.041</em></span><span data-pt-html="&lt;b&gt;focus&lt;/b&gt;: [visão comp., python, web]"><b>focus</b>: [comp. vision, python, web]</span><span class="terminal-prompt" data-pt="❯ explorar projeto">❯ explore project</span><svg class="screen-net" viewBox="0 0 60 48"><g class="net-edges"><line x1="6" y1="10" x2="30" y2="6"/><line x1="6" y1="10" x2="30" y2="18"/><line x1="6" y1="10" x2="30" y2="30"/><line x1="6" y1="10" x2="30" y2="42"/><line x1="6" y1="24" x2="30" y2="6"/><line x1="6" y1="24" x2="30" y2="18"/><line x1="6" y1="24" x2="30" y2="30"/><line x1="6" y1="24" x2="30" y2="42"/><line x1="6" y1="38" x2="30" y2="6"/><line x1="6" y1="38" x2="30" y2="18"/><line x1="6" y1="38" x2="30" y2="30"/><line x1="6" y1="38" x2="30" y2="42"/><line x1="30" y1="6" x2="54" y2="17"/><line x1="30" y1="6" x2="54" y2="31"/><line x1="30" y1="18" x2="54" y2="17"/><line x1="30" y1="18" x2="54" y2="31"/><line x1="30" y1="30" x2="54" y2="17"/><line x1="30" y1="30" x2="54" y2="31"/><line x1="30" y1="42" x2="54" y2="17"/><line x1="30" y1="42" x2="54" y2="31"/></g><g class="net-nodes"><circle cx="6" cy="10" r="3" style="--d:0.00s"/><circle cx="6" cy="24" r="3" style="--d:0.12s"/><circle cx="6" cy="38" r="3" style="--d:0.24s"/><circle cx="30" cy="6" r="3" style="--d:0.35s"/><circle cx="30" cy="18" r="3" style="--d:0.47s"/><circle cx="30" cy="30" r="3" style="--d:0.59s"/><circle cx="30" cy="42" r="3" style="--d:0.71s"/><circle cx="54" cy="17" r="3" style="--d:0.70s"/><circle cx="54" cy="31" r="3" style="--d:0.82s"/></g></svg></div>
+                      <div class="screen-stack" id="screen-stack" aria-hidden="true"></div>
                       <span class="screen-open" data-pt-html="Conhecer projeto &lt;span&gt;↗&lt;/span&gt;">View project <span>↗</span></span>
                     </div>
                   </div>
-                  <span class="monitor-brand">PLC / CODE AFTER DARK</span>
                 </a>
-                <div class="desk-keyboard" aria-hidden="true"><div></div><span></span></div>
-                <div class="desk-mouse" aria-hidden="true"></div>
-                <a class="desk-notebook desk-object" href="#experiencia" aria-label="Notebook: see my journey" data-pt-aria-label="Caderno: conhecer minha trajetória"><span>DEV<br />NOTES_</span><small data-pt="MINHA TRAJETÓRIA ↗">MY JOURNEY ↗</small></a>
-                <a class="desk-photo desk-object" href="#sobre" aria-label="Photo frame: about Pedro" data-pt-aria-label="Porta-retrato: sobre Pedro"><img src="./assets/img/pedro.webp" alt="" width="320" height="320" /><span data-pt="oi, sou o Pedro :)">hi, I'm Pedro :)</span></a>
-                <a class="desk-cup desk-object" href="#contato" aria-label="Mug: let's talk" data-pt-aria-label="Caneca: vamos conversar"><span>&lt;/&gt;<br />coffee.</span></a>
-                <div class="desk-crucifix" aria-hidden="true"><i></i><i></i><span></span></div>
-                <span class="desk-sticker" aria-hidden="true">~/plc</span>
+                <a class="desk-hotspot hs-notebook" href="#experiencia" aria-label="Notebook: see my journey" data-pt-aria-label="Caderno: conhecer minha trajetória"><span class="hs-tag" data-pt="Minha trajetória ↗">My journey ↗</span></a>
+                <a class="desk-hotspot hs-photo" href="#sobre" aria-label="Photo frame: about Pedro" data-pt-aria-label="Porta-retrato: sobre Pedro"><span class="hs-tag" data-pt="oi, sou o Pedro :)">hi, I'm Pedro :)</span></a>
+                <a class="desk-hotspot hs-mug" href="#contato" aria-label="Mug: let's talk" data-pt-aria-label="Caneca: vamos conversar"><span class="hs-tag" data-pt="Vamos conversar ↗">Let's talk ↗</span></a>
               </div>
               </div>
             </div>
