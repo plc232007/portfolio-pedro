@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Pedro Leite Campos, estagiário de IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
-  <title>Pedro Leite Campos | IA e Visão Computacional · Python</title>
+    content="Pedro Leite Campos works with AI and computer vision at CNT (CNT Highway Survey): Python, PyTorch, YOLO and OpenCV. Fullstack foundation in React/Next.js. Brasília, Brazil." data-pt-content="Pedro Leite Campos, IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
+  <title data-pt="Pedro Leite Campos | IA e Visão Computacional · Python">Pedro Leite Campos | AI &amp; Computer Vision · Python</title>
 
-  <link rel="canonical" href="https://plc232007.github.io/portifolio-pedro/" />
+  <link rel="canonical" href="https://plc232007.github.io/portfolio-pedro/" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23050b09'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' text-anchor='middle' fill='%2370ff9c'%3E%7BP%7D%3C/text%3E%3C/svg%3E" />
 
   <!-- Open Graph / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Pedro Leite Campos | IA e Visão Computacional · Python" />
-  <meta property="og:description" content="Pedro Leite Campos, estagiário de IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
-  <meta property="og:url" content="https://plc232007.github.io/portifolio-pedro/" />
-  <meta property="og:image" content="https://plc232007.github.io/portifolio-pedro/assets/img/og-image.jpg" />
+  <meta property="og:title" content="Pedro Leite Campos | AI &amp; Computer Vision · Python" data-pt-content="Pedro Leite Campos | IA e Visão Computacional · Python" />
+  <meta property="og:description" content="Pedro Leite Campos works with AI and computer vision at CNT (CNT Highway Survey): Python, PyTorch, YOLO and OpenCV. Fullstack foundation in React/Next.js. Brasília, Brazil." data-pt-content="Pedro Leite Campos, IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
+  <meta property="og:url" content="https://plc232007.github.io/portfolio-pedro/" />
+  <meta property="og:image" content="https://plc232007.github.io/portfolio-pedro/assets/img/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Pedro Leite Campos, IA e visão computacional com Python" />
-  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:image:alt" content="Pedro Leite Campos, AI and computer vision with Python" data-pt-content="Pedro Leite Campos, IA e visão computacional com Python" />
+  <meta property="og:locale" content="en_US" data-pt-content="pt_BR" />
+  <meta property="og:locale:alternate" content="pt_BR" data-pt-content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pedro Leite Campos | IA e Visão Computacional · Python" />
-  <meta name="twitter:description" content="Pedro Leite Campos, estagiário de IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
-  <meta name="twitter:image" content="https://plc232007.github.io/portifolio-pedro/assets/img/og-image.jpg" />
+  <meta name="twitter:title" content="Pedro Leite Campos | AI &amp; Computer Vision · Python" data-pt-content="Pedro Leite Campos | IA e Visão Computacional · Python" />
+  <meta name="twitter:description" content="Pedro Leite Campos works with AI and computer vision at CNT (CNT Highway Survey): Python, PyTorch, YOLO and OpenCV. Fullstack foundation in React/Next.js. Brasília, Brazil." data-pt-content="Pedro Leite Campos, IA e visão computacional na CNT (Pesquisa CNT de Rodovias): Python, PyTorch, YOLO e OpenCV. Base fullstack em React/Next.js. Brasília." />
+  <meta name="twitter:image" content="https://plc232007.github.io/portfolio-pedro/assets/img/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,6 +40,7 @@
   <link rel="stylesheet" href="./assets/css/workspace.css" />
 
 
+  <script src="./assets/js/i18n.js" defer></script>
   <script src="./assets/js/script.js" defer></script>
   <script src="./assets/js/interactions.js" defer></script>
   <script src="./assets/js/workspace.js" defer></script>
@@ -47,7 +49,7 @@
 <body>
   <!-- HUD -->
   <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-  <nav class="section-nav" id="section-nav" aria-label="Navegação por seções"></nav>
+  <nav class="section-nav" id="section-nav" aria-label="Section navigation" data-pt-aria-label="Navegação por seções"></nav>
 
   <!-- Fundo: malha técnica + véu de profundidade -->
   <div class="bg-grid" id="bg-grid" aria-hidden="true"></div>
@@ -56,11 +58,11 @@
   <div class="wrap">
     <header class="header">
       <div class="container nav">
-        <a class="logo" href="#inicio" aria-label="Ir para o início">
+        <a class="logo" href="#inicio" aria-label="Go to top" data-pt-aria-label="Ir para o início">
           <span class="logo-bracket">{</span> PLC <span class="logo-bracket">}</span>
         </a>
 
-        <nav aria-label="Navegação principal">
+        <nav aria-label="Main navigation" data-pt-aria-label="Navegação principal">
           <ul class="nav-links">
             <li>
               <a href="#projetos">
@@ -70,7 +72,7 @@
                   <rect x="3" y="11" width="6" height="6" rx="1"></rect>
                   <rect x="11" y="11" width="6" height="6" rx="1"></rect>
                 </svg>
-                Projetos
+                <span data-pt="Projetos">Projects</span>
               </a>
             </li>
 
@@ -99,7 +101,7 @@
                   <circle cx="10" cy="7" r="3"></circle>
                   <path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6"></path>
                 </svg>
-                Sobre
+                <span data-pt="Sobre">About</span>
               </a>
             </li>
 
@@ -108,7 +110,7 @@
                 <svg viewBox="0 0 20 20" fill="currentColor" class="icon-xs" aria-hidden="true">
                   <path d="M10 2L2 6.5l8 4 8-4L10 2zM2 13.5l8 4 8-4M2 10l8 4 8-4"></path>
                 </svg>
-                Formação
+                <span data-pt="Formação">Education</span>
               </a>
             </li>
 
@@ -117,46 +119,43 @@
                 <svg viewBox="0 0 20 20" fill="currentColor" class="icon-xs" aria-hidden="true">
                   <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm2 0l6 5 6-5"></path>
                 </svg>
-                Contato
+                <span data-pt="Contato">Contact</span>
               </a>
             </li>
           </ul>
         </nav>
 
-        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema">
-          <span id="theme-icon">🌙</span>
-        </button>
+        <div class="nav-tools">
+          <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Mudar para português">
+            <span class="lang-opt" data-lang="en">EN</span><span class="lang-opt" data-lang="pt">PT</span>
+          </button>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-pt-aria-label="Alternar tema">
+            <span id="theme-icon">🌙</span>
+          </button>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- ========== HERO ========== -->
-      <section class="hero workspace-hero" id="inicio" data-nav-label="Início">
+      <section class="hero workspace-hero" id="inicio" data-nav-label="Home" data-nav-label-pt="Início">
         <div class="container hero-grid">
           <div>
             <div class="hero-badge">
               <span class="dot"></span>
-              Aberto a oportunidades em IA e visão computacional · Brasília, DF
+              <span data-pt="Aberto a oportunidades em IA e visão computacional · Brasília, DF">Open to opportunities in AI and computer vision · Brasília, DF</span>
             </div>
 
             <h1 class="hero-name">Pedro<br /><span>Leite Campos.</span></h1>
 
-            <p class="hero-role">
-              IA e Visão Computacional · Python
-            </p>
+            <p class="hero-role" data-pt="IA e Visão Computacional · Python">AI and Computer Vision · Python</p>
 
-            <p class="hero-intro">
-              Estagiário de IA na CNT, onde treino modelos de visão computacional (YOLO, PyTorch) para a Pesquisa CNT
-              de Rodovias. Antes, fui desenvolvedor fullstack na Engesoftware, então também construo o que fica em volta
-              do modelo: API, banco e interface. São 7 projetos publicados.
-            </p>
+            <p class="hero-intro" data-pt="Na CNT, treino modelos de visão computacional (YOLO, PyTorch) para a Pesquisa CNT de Rodovias. Antes, fui desenvolvedor fullstack na Engesoftware, então também construo o que fica em volta do modelo: API, banco e interface. São 7 projetos publicados.">At CNT, I train computer vision models (YOLO, PyTorch) for the CNT Highway Survey. Before that, I was a fullstack developer at Engesoftware, so I also build what surrounds the model: API, database and interface. 7 published projects.</p>
 
             <p class="studio-stack">PYTHON <span>/</span> PYTORCH <span>/</span> YOLO <span>/</span> OPENCV <span>/</span> REACT</p>
 
             <div class="cta-group">
-              <a class="btn btn-primary" href="#projetos">
-                Ver projetos
-              </a>
+              <a class="btn btn-primary" href="#projetos" data-pt="Ver projetos">View projects</a>
 
               <a class="btn btn-ghost" href="./assets/docs/curriculo-pedro-leite-campos.pdf"
                 download="Pedro-Leite-Campos-Curriculo.pdf">
@@ -166,18 +165,18 @@
                   <line x1="10" y1="9" x2="10" y2="15"></line>
                   <polyline points="7,12 10,15 13,12"></polyline>
                 </svg>
-                Baixar currículo
+                <span data-pt="Baixar currículo">Download résumé</span>
               </a>
             </div>
 
-            <ul class="hero-contact" aria-label="Contato">
+            <ul class="hero-contact" aria-label="Contact" data-pt-aria-label="Contato">
               <li><a href="mailto:pleitecampos@gmail.com">pleitecampos@gmail.com</a></li>
               <li><a href="https://www.linkedin.com/in/pedro-campos-1473a5345/" target="_blank" rel="noreferrer">LinkedIn</a></li>
               <li><a href="https://github.com/plc232007" target="_blank" rel="noreferrer">GitHub</a></li>
             </ul>
           </div>
 
-          <div class="workspace" id="workspace" aria-label="Workspace interativo de Pedro">
+          <div class="workspace" id="workspace" aria-label="Pedro's interactive workspace" data-pt-aria-label="Workspace interativo de Pedro">
             <div class="workspace-heading"><span><i></i> PEDRO@WORKSPACE:~</span><span>SESSION / 01</span></div>
             <div class="workspace-stage" id="workspace-stage">
               <div class="room-halo" aria-hidden="true"></div>
@@ -219,28 +218,28 @@
                         <polygon points="250,50 263,70 237,70" fill="#e0b23c" />
                         <text x="250" y="68" text-anchor="middle" font-size="10" font-weight="700" fill="#2a2208">!</text>
                         <polyline points="176,121 182,114 188,122 195,115 202,123 210,117" fill="none" stroke="#040806" stroke-width="2.2" />
-                        <g class="cv-det cv-det--car"><rect x="86" y="80" width="58" height="42" pathLength="100" /><rect class="cv-tag" x="86" y="71" width="51" height="9" /><text x="89" y="78">veículo 0.94</text></g>
-                        <g class="cv-det cv-det--sign"><rect x="233" y="46" width="34" height="27" pathLength="100" /><rect class="cv-tag" x="224" y="37" width="45" height="9" /><text x="227" y="44">placa 0.88</text></g>
-                        <g class="cv-det cv-det--crack"><rect x="172" y="109" width="42" height="18" pathLength="100" /><rect class="cv-tag" x="172" y="100" width="48" height="9" /><text x="175" y="107">trinca 0.81</text></g>
+                        <g class="cv-det cv-det--car"><rect x="86" y="80" width="58" height="42" pathLength="100" /><rect class="cv-tag" x="86" y="71" width="51" height="9" /><text x="89" y="78" data-pt="veículo 0.94">vehicle 0.94</text></g>
+                        <g class="cv-det cv-det--sign"><rect x="233" y="46" width="34" height="27" pathLength="100" /><rect class="cv-tag" x="224" y="37" width="45" height="9" /><text x="227" y="44" data-pt="placa 0.88">sign 0.88</text></g>
+                        <g class="cv-det cv-det--crack"><rect x="172" y="109" width="42" height="18" pathLength="100" /><rect class="cv-tag" x="172" y="100" width="48" height="9" /><text x="175" y="107" data-pt="trinca 0.81">crack 0.81</text></g>
                         <rect class="cv-scan" width="300" height="2" />
                       </svg>
-                      <div class="cv-meta"><span>YOLO · PyTorch · OpenCV</span><span>demo ilustrativa</span></div>
+                      <div class="cv-meta"><span>YOLO · PyTorch · OpenCV</span><span data-pt="demo ilustrativa">illustrative demo</span></div>
                     </div>
                     <div class="screen-body" hidden>
                       <span class="screen-kicker">PROJECT / <span id="screen-number">01</span></span>
                       <strong id="screen-title">LVM</strong>
-                      <p id="screen-description">Geometria interativa com exercícios gerados por semente e assistente de IA.</p>
-                      <div class="screen-terminal" aria-hidden="true"><span><b>❯</b> python <em>train.py</em> --model plc-net</span><span>epoch <em id="train-epoch">20</em>/20 <b id="train-progress">██████████</b> loss <em id="train-loss">0.041</em></span><span><b>focus</b>: [visão comp., python, web]</span><span class="terminal-prompt">❯ explorar projeto</span><svg class="screen-net" viewBox="0 0 60 48"><g class="net-edges"><line x1="6" y1="10" x2="30" y2="6"/><line x1="6" y1="10" x2="30" y2="18"/><line x1="6" y1="10" x2="30" y2="30"/><line x1="6" y1="10" x2="30" y2="42"/><line x1="6" y1="24" x2="30" y2="6"/><line x1="6" y1="24" x2="30" y2="18"/><line x1="6" y1="24" x2="30" y2="30"/><line x1="6" y1="24" x2="30" y2="42"/><line x1="6" y1="38" x2="30" y2="6"/><line x1="6" y1="38" x2="30" y2="18"/><line x1="6" y1="38" x2="30" y2="30"/><line x1="6" y1="38" x2="30" y2="42"/><line x1="30" y1="6" x2="54" y2="17"/><line x1="30" y1="6" x2="54" y2="31"/><line x1="30" y1="18" x2="54" y2="17"/><line x1="30" y1="18" x2="54" y2="31"/><line x1="30" y1="30" x2="54" y2="17"/><line x1="30" y1="30" x2="54" y2="31"/><line x1="30" y1="42" x2="54" y2="17"/><line x1="30" y1="42" x2="54" y2="31"/></g><g class="net-nodes"><circle cx="6" cy="10" r="3" style="--d:0.00s"/><circle cx="6" cy="24" r="3" style="--d:0.12s"/><circle cx="6" cy="38" r="3" style="--d:0.24s"/><circle cx="30" cy="6" r="3" style="--d:0.35s"/><circle cx="30" cy="18" r="3" style="--d:0.47s"/><circle cx="30" cy="30" r="3" style="--d:0.59s"/><circle cx="30" cy="42" r="3" style="--d:0.71s"/><circle cx="54" cy="17" r="3" style="--d:0.70s"/><circle cx="54" cy="31" r="3" style="--d:0.82s"/></g></svg></div>
-                      <span class="screen-open">Conhecer projeto <span>↗</span></span>
+                      <p id="screen-description">Interactive geometry with seed-generated exercises and an AI assistant.</p>
+                      <div class="screen-terminal" aria-hidden="true"><span><b>❯</b> python <em>train.py</em> --model plc-net</span><span>epoch <em id="train-epoch">20</em>/20 <b id="train-progress">██████████</b> loss <em id="train-loss">0.041</em></span><span data-pt-html="&lt;b&gt;focus&lt;/b&gt;: [visão comp., python, web]"><b>focus</b>: [comp. vision, python, web]</span><span class="terminal-prompt" data-pt="❯ explorar projeto">❯ explore project</span><svg class="screen-net" viewBox="0 0 60 48"><g class="net-edges"><line x1="6" y1="10" x2="30" y2="6"/><line x1="6" y1="10" x2="30" y2="18"/><line x1="6" y1="10" x2="30" y2="30"/><line x1="6" y1="10" x2="30" y2="42"/><line x1="6" y1="24" x2="30" y2="6"/><line x1="6" y1="24" x2="30" y2="18"/><line x1="6" y1="24" x2="30" y2="30"/><line x1="6" y1="24" x2="30" y2="42"/><line x1="6" y1="38" x2="30" y2="6"/><line x1="6" y1="38" x2="30" y2="18"/><line x1="6" y1="38" x2="30" y2="30"/><line x1="6" y1="38" x2="30" y2="42"/><line x1="30" y1="6" x2="54" y2="17"/><line x1="30" y1="6" x2="54" y2="31"/><line x1="30" y1="18" x2="54" y2="17"/><line x1="30" y1="18" x2="54" y2="31"/><line x1="30" y1="30" x2="54" y2="17"/><line x1="30" y1="30" x2="54" y2="31"/><line x1="30" y1="42" x2="54" y2="17"/><line x1="30" y1="42" x2="54" y2="31"/></g><g class="net-nodes"><circle cx="6" cy="10" r="3" style="--d:0.00s"/><circle cx="6" cy="24" r="3" style="--d:0.12s"/><circle cx="6" cy="38" r="3" style="--d:0.24s"/><circle cx="30" cy="6" r="3" style="--d:0.35s"/><circle cx="30" cy="18" r="3" style="--d:0.47s"/><circle cx="30" cy="30" r="3" style="--d:0.59s"/><circle cx="30" cy="42" r="3" style="--d:0.71s"/><circle cx="54" cy="17" r="3" style="--d:0.70s"/><circle cx="54" cy="31" r="3" style="--d:0.82s"/></g></svg></div>
+                      <span class="screen-open" data-pt-html="Conhecer projeto &lt;span&gt;↗&lt;/span&gt;">View project <span>↗</span></span>
                     </div>
                   </div>
                   <span class="monitor-brand">PLC / CODE AFTER DARK</span>
                 </a>
                 <div class="desk-keyboard" aria-hidden="true"><div></div><span></span></div>
                 <div class="desk-mouse" aria-hidden="true"></div>
-                <a class="desk-notebook desk-object" href="#experiencia" aria-label="Caderno: conhecer minha trajetória"><span>DEV<br />NOTES_</span><small>MINHA TRAJETÓRIA ↗</small></a>
-                <a class="desk-photo desk-object" href="#sobre" aria-label="Porta-retrato: sobre Pedro"><img src="./assets/img/pedro.webp" alt="" width="320" height="320" /><span>oi, sou o Pedro :)</span></a>
-                <a class="desk-cup desk-object" href="#contato" aria-label="Caneca: vamos conversar"><span>&lt;/&gt;<br />coffee.</span></a>
+                <a class="desk-notebook desk-object" href="#experiencia" aria-label="Notebook: see my journey" data-pt-aria-label="Caderno: conhecer minha trajetória"><span>DEV<br />NOTES_</span><small data-pt="MINHA TRAJETÓRIA ↗">MY JOURNEY ↗</small></a>
+                <a class="desk-photo desk-object" href="#sobre" aria-label="Photo frame: about Pedro" data-pt-aria-label="Porta-retrato: sobre Pedro"><img src="./assets/img/pedro.webp" alt="" width="320" height="320" /><span data-pt="oi, sou o Pedro :)">hi, I'm Pedro :)</span></a>
+                <a class="desk-cup desk-object" href="#contato" aria-label="Mug: let's talk" data-pt-aria-label="Caneca: vamos conversar"><span>&lt;/&gt;<br />coffee.</span></a>
                 <div class="desk-crucifix" aria-hidden="true"><i></i><i></i><span></span></div>
                 <span class="desk-sticker" aria-hidden="true">~/plc</span>
               </div>
@@ -248,45 +247,45 @@
             </div>
             <div class="workspace-controls">
               <p id="workspace-hint">Mova o mouse. Explore os objetos.</p>
-              <button type="button" id="workspace-next" hidden aria-label="Mostrar o próximo item no monitor">Próximo <span>→</span></button>
+              <button type="button" id="workspace-next" hidden aria-label="Show the next item on the monitor" data-pt-aria-label="Mostrar o próximo item no monitor" data-pt-html="Próximo &lt;span&gt;→&lt;/span&gt;">Next <span>→</span></button>
             </div>
-            <nav class="workspace-shortcuts" aria-label="Explorar o workspace">
-              <a href="#projetos">01 <span>Projetos</span> ↗</a>
-              <a href="#experiencia">02 <span>Trajetória</span> ↗</a>
-              <a href="#contato">03 <span>Vamos conversar</span> ↗</a>
+            <nav class="workspace-shortcuts" aria-label="Explore the workspace" data-pt-aria-label="Explorar o workspace">
+              <a href="#projetos">01 <span data-pt="Projetos">Projects</span> ↗</a>
+              <a href="#experiencia">02 <span data-pt="Trajetória">Journey</span> ↗</a>
+              <a href="#contato">03 <span data-pt="Vamos conversar">Let's talk</span> ↗</a>
             </nav>
           </div>
         </div>
       </section>
 
       <!-- ========== PROJETOS ========== -->
-      <section class="section reveal" id="projetos" data-nav-label="Projetos">
+      <section class="section reveal" id="projetos" data-nav-label="Projects" data-nav-label-pt="Projetos">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">01</span> <span>Projetos</span></h2>
+            <h2><span class="section-index">01</span> <span data-pt="Projetos">Projects</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">builds</span>
           </div>
 
 
-          <p class="projects-intro">Três projetos em produção, de ponta a ponta. Os outros estão mais abaixo.</p>
+          <p class="projects-intro" data-pt="Três projetos em produção, de ponta a ponta. Os outros estão mais abaixo.">Three projects in production, end to end. The others are further down.</p>
 
           <div class="projects-grid projects-grid--featured">
             <article id="proj-lvm" class="proj-card proj-card--featured">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">📐</span>
-                <span class="proj-status proj-status-live">Em produção</span>
+                <span class="proj-status proj-status-live" data-pt="Em produção">In production</span>
               </div>
 
-              <h3>LVM — Laboratório Virtual de Matemática (IFB)</h3>
+              <h3 data-pt="LVM — Laboratório Virtual de Matemática (IFB)">LVM — Virtual Math Lab (IFB)</h3>
 
               <dl class="proj-case">
-                <dt>Problema</dt>
-                <dd>Um TCC no IFB precisava trocar um mural de links estático por algo em que o aluno manipulasse a geometria, em vez de só ler sobre ela.</dd>
-                <dt>Solução</dt>
-                <dd>Laboratório em Next.js: o aluno arrasta o triângulo e vê as relações métricas valerem em qualquer posição. Os exercícios são gerados por semente, então os números mudam a cada tentativa. O Fermat, um assistente de IA, tira dúvidas no contexto da atividade sem entregar a resposta.</dd>
-                <dt>Decisões técnicas</dt>
-                <dd>Domínio matemático puro, isolado da UI. Geradores determinísticos cobertos por testes de propriedade (fast-check). O assistente roda no servidor, então a chave da API nunca chega ao navegador.</dd>
+                <dt data-pt="Problema">Problem</dt>
+                <dd data-pt="Um TCC no IFB precisava trocar um mural de links estático por algo em que o aluno manipulasse a geometria, em vez de só ler sobre ela.">A capstone project at IFB needed to replace a static wall of links with something where students manipulate the geometry instead of just reading about it.</dd>
+                <dt data-pt="Solução">Solution</dt>
+                <dd data-pt="Laboratório em Next.js: o aluno arrasta o triângulo e vê as relações métricas valerem em qualquer posição. Os exercícios são gerados por semente, então os números mudam a cada tentativa. O Fermat, um assistente de IA, tira dúvidas no contexto da atividade sem entregar a resposta.">A Next.js lab: students drag the triangle and see the metric relations hold in any position. Exercises are seed-generated, so the numbers change on every attempt. Fermat, an AI assistant, answers questions in the context of the activity without giving away the answer.</dd>
+                <dt data-pt="Decisões técnicas">Technical decisions</dt>
+                <dd data-pt="Domínio matemático puro, isolado da UI. Geradores determinísticos cobertos por testes de propriedade (fast-check). O assistente roda no servidor, então a chave da API nunca chega ao navegador.">Pure math domain, isolated from the UI. Deterministic generators covered by property-based tests (fast-check). The assistant runs on the server, so the API key never reaches the browser.</dd>
               </dl>
 
               <div class="proj-techs">
@@ -299,25 +298,25 @@
               </div>
 
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://lvm-seven.vercel.app" target="_blank" rel="noreferrer">Ver app ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/lvm" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://lvm-seven.vercel.app" target="_blank" rel="noreferrer" data-pt="Ver app ↗">View app ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/lvm" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-organizador" class="proj-card proj-card--featured">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">💰</span>
-                <span class="proj-status proj-status-live">Em produção</span>
+                <span class="proj-status proj-status-live" data-pt="Em produção">In production</span>
               </div>
 
-              <h3>Organizador de Contas</h3>
+              <h3 data-pt="Organizador de Contas">Account Organizer</h3>
 
               <dl class="proj-case">
-                <dt>Problema</dt>
-                <dd>O controle financeiro da família ficava em planilha, sem separação entre os dados de cada pessoa.</dd>
-                <dt>Solução</dt>
-                <dd>App em Next.js instalável como PWA: gastos e receitas, contas a pagar com vencimento, compras parceladas e resumo do mês.</dd>
-                <dt>Decisões técnicas</dt>
-                <dd>Cada usuário só enxerga os próprios dados, garantido no banco por Row Level Security (Supabase). Validação com Zod, migrations SQL versionadas e UI com shadcn/ui.</dd>
+                <dt data-pt="Problema">Problem</dt>
+                <dd data-pt="O controle financeiro da família ficava em planilha, sem separação entre os dados de cada pessoa.">The family's finances lived in a spreadsheet, with no separation between each person's data.</dd>
+                <dt data-pt="Solução">Solution</dt>
+                <dd data-pt="App em Next.js instalável como PWA: gastos e receitas, contas a pagar com vencimento, compras parceladas e resumo do mês.">A Next.js app installable as a PWA: expenses and income, bills with due dates, installment purchases and a monthly summary.</dd>
+                <dt data-pt="Decisões técnicas">Technical decisions</dt>
+                <dd data-pt="Cada usuário só enxerga os próprios dados, garantido no banco por Row Level Security (Supabase). Validação com Zod, migrations SQL versionadas e UI com shadcn/ui.">Each user only sees their own data, enforced in the database by Row Level Security (Supabase). Validation with Zod, versioned SQL migrations and a shadcn/ui interface.</dd>
               </dl>
 
               <div class="proj-techs">
@@ -330,25 +329,25 @@
               </div>
 
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://organizador-contas-et4n.vercel.app/" target="_blank" rel="noreferrer">Ver app ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/organizador-contas" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://organizador-contas-et4n.vercel.app/" target="_blank" rel="noreferrer" data-pt="Ver app ↗">View app ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/organizador-contas" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-portal-aluno" class="proj-card proj-card--featured">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">⛪</span>
-                <span class="proj-status proj-status-live">Em uso</span>
+                <span class="proj-status proj-status-live" data-pt="Em uso">In use</span>
               </div>
 
-              <h3>Portal do Aluno — Catequese IC</h3>
+              <h3 data-pt="Portal do Aluno — Catequese IC">Student Portal — Catechesis IC</h3>
 
               <dl class="proj-case">
-                <dt>Problema</dt>
-                <dd>A turma de Iniciação Cristã de Adultos precisava de um só lugar, fácil de abrir no celular, para o cronograma, o conteúdo de cada encontro, os santos da semana e as orações.</dd>
-                <dt>Solução</dt>
-                <dd>PWA instalável e com navegação offline: encontros organizados pelos pilares do Catecismo, santos semana a semana e orações em português e latim. O Aquino, um assistente de IA, tira dúvidas de fé a partir do material da própria turma.</dd>
-                <dt>Decisões técnicas</dt>
-                <dd>HTML, CSS e JavaScript puro, sem framework nem build. Service Worker para o cache offline e vídeos do YouTube carregados só no clique. O Aquino roda numa função serverless com o Gemini, então a chave da API nunca chega ao navegador, e a rota limita o tamanho das mensagens.</dd>
+                <dt data-pt="Problema">Problem</dt>
+                <dd data-pt="A turma de Iniciação Cristã de Adultos precisava de um só lugar, fácil de abrir no celular, para o cronograma, o conteúdo de cada encontro, os santos da semana e as orações.">The Christian Initiation of Adults class needed one place, easy to open on a phone, for the schedule, the content of each session, the saints of the week and the prayers.</dd>
+                <dt data-pt="Solução">Solution</dt>
+                <dd data-pt="PWA instalável e com navegação offline: encontros organizados pelos pilares do Catecismo, santos semana a semana e orações em português e latim. O Aquino, um assistente de IA, tira dúvidas de fé a partir do material da própria turma.">An installable PWA with offline navigation: sessions organized by the pillars of the Catechism, saints week by week and prayers in Portuguese and Latin. Aquino, an AI assistant, answers questions about the faith drawing on the class's own material.</dd>
+                <dt data-pt="Decisões técnicas">Technical decisions</dt>
+                <dd data-pt="HTML, CSS e JavaScript puro, sem framework nem build. Service Worker para o cache offline e vídeos do YouTube carregados só no clique. O Aquino roda numa função serverless com o Gemini, então a chave da API nunca chega ao navegador, e a rota limita o tamanho das mensagens.">Plain HTML, CSS and JavaScript, no framework or build step. A Service Worker handles the offline cache and YouTube videos load only on click. Aquino runs in a serverless function with Gemini, so the API key never reaches the browser, and the route limits message size.</dd>
               </dl>
 
               <div class="proj-techs">
@@ -361,21 +360,21 @@
               </div>
 
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://catequese-adultos-icv1.vercel.app/" target="_blank" rel="noreferrer">Ver site ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/catequese-adultos-ic" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://catequese-adultos-icv1.vercel.app/" target="_blank" rel="noreferrer" data-pt="Ver site ↗">View site ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/catequese-adultos-ic" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
           </div>
 
-          <h3 class="projects-subtitle">Outros projetos</h3>
+          <h3 class="projects-subtitle" data-pt="Outros projetos">Other projects</h3>
           <div class="projects-grid projects-grid--compact">
             <article id="proj-factoryflow" class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🤖</span>
-                <span class="proj-status proj-status-live">Concluído</span>
+                <span class="proj-status proj-status-live" data-pt="Concluído">Completed</span>
               </div>
               <h3>FactoryFlow AI</h3>
-              <p class="proj-description">Pipeline multiagente que recebe um requisito em linguagem natural e gera análise, arquitetura, código Python, testes e relatório.</p>
+              <p class="proj-description" data-pt="Pipeline multiagente que recebe um requisito em linguagem natural e gera análise, arquitetura, código Python, testes e relatório.">Multi-agent pipeline that takes a requirement in natural language and produces analysis, architecture, Python code, tests and a report.</p>
               <div class="proj-techs">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">OpenAI SDK</span>
@@ -383,16 +382,16 @@
                 <span class="tech-pill">pytest</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link" href="https://github.com/plc232007/factoryflow-ai" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link" href="https://github.com/plc232007/factoryflow-ai" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-anime-finance" class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">📊</span>
-                <span class="proj-status proj-status-idea">Em evolução</span>
+                <span class="proj-status proj-status-idea" data-pt="Em evolução">In progress</span>
               </div>
               <h3>Anime Finance</h3>
-              <p class="proj-description">Finanças pessoais fullstack: API em Django REST com JWT, frontend em React e um módulo de IA que analisa hábitos de gasto.</p>
+              <p class="proj-description" data-pt="Finanças pessoais fullstack: API em Django REST com JWT, frontend em React e um módulo de IA que analisa hábitos de gasto.">Fullstack personal finance: a Django REST API with JWT, a React frontend and an AI module that analyzes spending habits.</p>
               <div class="proj-techs">
                 <span class="tech-pill">Django REST</span>
                 <span class="tech-pill">JWT</span>
@@ -400,16 +399,16 @@
                 <span class="tech-pill">pytest</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link" href="https://github.com/plc232007/anime-finance" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link" href="https://github.com/plc232007/anime-finance" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🍔</span>
-                <span class="proj-status proj-status-live">Publicado</span>
+                <span class="proj-status proj-status-live" data-pt="Publicado">Published</span>
               </div>
               <h3>Sabor Express</h3>
-              <p class="proj-description">Gerenciador de restaurantes com uma camada de regras e duas interfaces sobre ela: terminal e web em Flask.</p>
+              <p class="proj-description" data-pt="Gerenciador de restaurantes com uma camada de regras e duas interfaces sobre ela: terminal e web em Flask.">Restaurant manager with a single rules layer and two interfaces on top of it: terminal and a Flask web app.</p>
               <div class="proj-techs">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">Flask</span>
@@ -417,17 +416,17 @@
                 <span class="tech-pill">Vercel</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://sabor-express-eight.vercel.app/" target="_blank" rel="noreferrer">Ver site ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/sabor-express" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://sabor-express-eight.vercel.app/" target="_blank" rel="noreferrer" data-pt="Ver site ↗">View site ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/sabor-express" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-task-manager" class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🗂️</span>
-                <span class="proj-status proj-status-live">Concluído</span>
+                <span class="proj-status proj-status-live" data-pt="Concluído">Completed</span>
               </div>
               <h3>Task Manager API</h3>
-              <p class="proj-description">API REST de tarefas com CRUD, validação de entrada e persistência em SQLite.</p>
+              <p class="proj-description" data-pt="API REST de tarefas com CRUD, validação de entrada e persistência em SQLite.">REST task API with CRUD, input validation and SQLite persistence.</p>
               <div class="proj-techs">
                 <span class="tech-pill">Python</span>
                 <span class="tech-pill">FastAPI</span>
@@ -435,16 +434,16 @@
                 <span class="tech-pill">Pydantic</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link" href="https://github.com/plc232007/to-do-list" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link" href="https://github.com/plc232007/to-do-list" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🛍️</span>
-                <span class="proj-status proj-status-live">Publicado</span>
+                <span class="proj-status proj-status-live" data-pt="Publicado">Published</span>
               </div>
-              <h3>Catálogo Naty</h3>
-              <p class="proj-description">Catálogo de produtos com controle de estoque e link público para clientes, feito para uma empreendedora.</p>
+              <h3 data-pt="Catálogo Naty">Naty's Catalog</h3>
+              <p class="proj-description" data-pt="Catálogo de produtos com controle de estoque e link público para clientes, feito para uma empreendedora.">Product catalog with stock control and a public link for customers, built for an entrepreneur.</p>
               <div class="proj-techs">
                 <span class="tech-pill">HTML</span>
                 <span class="tech-pill">CSS</span>
@@ -452,17 +451,17 @@
                 <span class="tech-pill">Vercel</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://catalogo-naty.vercel.app/" target="_blank" rel="noreferrer">Ver site ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/catalogo-naty" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://catalogo-naty.vercel.app/" target="_blank" rel="noreferrer" data-pt="Ver site ↗">View site ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/catalogo-naty" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🏢</span>
-                <span class="proj-status proj-status-live">Publicado</span>
+                <span class="proj-status proj-status-live" data-pt="Publicado">Published</span>
               </div>
               <h3>Leite Campos Consultoria</h3>
-              <p class="proj-description">Site institucional da consultoria da família: serviços, proposta de valor e contato.</p>
+              <p class="proj-description" data-pt="Site institucional da consultoria da família: serviços, proposta de valor e contato.">Corporate website for the family consultancy: services, value proposition and contact.</p>
               <div class="proj-techs">
                 <span class="tech-pill">HTML</span>
                 <span class="tech-pill">CSS</span>
@@ -470,17 +469,17 @@
                 <span class="tech-pill">GitHub Pages</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://plc232007.github.io/leite-campos/" target="_blank" rel="noreferrer">Ver site ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/leite-campos" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://plc232007.github.io/leite-campos/" target="_blank" rel="noreferrer" data-pt="Ver site ↗">View site ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/leite-campos" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-catequistas" class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">📚</span>
-                <span class="proj-status proj-status-live">Em produção</span>
+                <span class="proj-status proj-status-live" data-pt="Em produção">In production</span>
               </div>
-              <h3>App dos Catequistas — Paróquia São José</h3>
-              <p class="proj-description">SPA usada por cerca de 70 catequistas: materiais, mural de avisos, calendário e painel da coordenação, com permissões por Row Level Security.</p>
+              <h3 data-pt="App dos Catequistas — Paróquia São José">Catechists App — São José Parish</h3>
+              <p class="proj-description" data-pt="SPA usada por cerca de 70 catequistas: materiais, mural de avisos, calendário e painel da coordenação, com permissões por Row Level Security.">SPA used by about 70 catechists: materials, notice board, calendar and a coordination dashboard, with permissions enforced by Row Level Security.</p>
               <div class="proj-techs">
                 <span class="tech-pill">React</span>
                 <span class="tech-pill">Supabase</span>
@@ -488,21 +487,21 @@
                 <span class="tech-pill">Tailwind</span>
               </div>
               <div class="proj-links">
-                <a class="proj-link proj-link--primary" href="https://app-catequese-taupe.vercel.app" target="_blank" rel="noreferrer">Ver app ↗</a>
-                <a class="proj-link" href="https://github.com/plc232007/app-catequese" target="_blank" rel="noreferrer">Código</a>
+                <a class="proj-link proj-link--primary" href="https://app-catequese-taupe.vercel.app" target="_blank" rel="noreferrer" data-pt="Ver app ↗">View app ↗</a>
+                <a class="proj-link" href="https://github.com/plc232007/app-catequese" target="_blank" rel="noreferrer" data-pt="Código">Code</a>
               </div>
             </article>
             <article id="proj-c" class="proj-card proj-card--compact">
               <div class="proj-top">
                 <span class="proj-icon" aria-hidden="true">🧮</span>
-                <span class="proj-status proj-status-live">Contínuo</span>
+                <span class="proj-status proj-status-live" data-pt="Contínuo">Ongoing</span>
               </div>
-              <h3>Fundamentos em Linguagem C</h3>
-              <p class="proj-description">Exercícios de APC II: ponteiros, alocação de memória, arquivos e estruturas de dados implementadas do zero.</p>
+              <h3 data-pt="Fundamentos em Linguagem C">C Language Fundamentals</h3>
+              <p class="proj-description" data-pt="Exercícios de APC II: ponteiros, alocação de memória, arquivos e estruturas de dados implementadas do zero.">APC II exercises: pointers, memory allocation, files and data structures implemented from scratch.</p>
               <div class="proj-techs">
                 <span class="tech-pill">C</span>
-                <span class="tech-pill">Ponteiros</span>
-                <span class="tech-pill">Estruturas de Dados</span>
+                <span class="tech-pill" data-pt="Ponteiros">Pointers</span>
+                <span class="tech-pill" data-pt="Estruturas de Dados">Data Structures</span>
               </div>
               <div class="proj-links">
                 <a class="proj-link" href="https://github.com/plc232007/c-learning" target="_blank" rel="noreferrer">c-learning</a>
@@ -514,10 +513,10 @@
       </section>
 
       <!-- ========== EXPERIÊNCIA ========== -->
-      <section class="section reveal" id="experiencia" data-nav-label="Experiência">
+      <section class="section reveal" id="experiencia" data-nav-label="Experience" data-nav-label-pt="Experiência">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">02</span> <span>Experiência Profissional</span></h2>
+            <h2><span class="section-index">02</span> <span data-pt="Experiência Profissional">Professional Experience</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">git log</span>
           </div>
@@ -528,17 +527,16 @@
               <div class="exp-card" id="exp-cnt">
                 <div class="exp-head">
                   <div>
-                    <div class="exp-company">CNT · Pesquisa CNT de Rodovias</div>
-                    <h3>Estagiário em IA e Visão Computacional</h3>
-                    <p class="exp-period">09/2026 — Atual</p>
+                    <div class="exp-company" data-pt="CNT · Pesquisa CNT de Rodovias">CNT · Highway Survey</div>
+                    <h3 data-pt="Estagiário em IA e Visão Computacional">AI and Computer Vision Intern</h3>
+                    <p class="exp-period" data-pt="09/2026 — Atual">09/2026 — Present</p>
                   </div>
-                  <span class="exp-badge">Estágio</span>
                 </div>
                 <ul class="exp-list">
-                  <li>Aplico visão computacional à Pesquisa CNT de Rodovias, que avalia as condições das rodovias brasileiras.</li>
-                  <li>Treino e avalio modelos YOLO em PyTorch, comparando métricas entre experimentos.</li>
-                  <li>Preparo e analiso dados com Pandas e NumPy e processo imagens com OpenCV.</li>
-                  <li>Documento experimentos e resultados para a equipe.</li>
+                  <li data-pt="Aplico visão computacional à Pesquisa CNT de Rodovias, que avalia as condições das rodovias brasileiras.">I apply computer vision to the CNT Highway Survey, which assesses the condition of Brazil's highways.</li>
+                  <li data-pt="Treino e avalio modelos YOLO em PyTorch, comparando métricas entre experimentos.">I train and evaluate YOLO models in PyTorch, comparing metrics across experiments.</li>
+                  <li data-pt="Preparo e analiso dados com Pandas e NumPy e processo imagens com OpenCV.">I prepare and analyze data with Pandas and NumPy and process images with OpenCV.</li>
+                  <li data-pt="Documento experimentos e resultados para a equipe.">I document experiments and results for the team.</li>
                 </ul>
                 <div class="exp-techs">
                   <span class="tech-pill">Python</span>
@@ -557,16 +555,15 @@
                 <div class="exp-head">
                   <div>
                     <div class="exp-company">Engesoftware Tecnologia</div>
-                    <h3>Desenvolvedor Fullstack</h3>
+                    <h3 data-pt="Desenvolvedor Fullstack">Fullstack Developer</h3>
                     <p class="exp-period">10/2025 — 10/2026</p>
                   </div>
-                  <span class="exp-badge">Estágio</span>
                 </div>
                 <ul class="exp-list">
-                  <li>Desenvolvi interfaces web com JavaScript, TypeScript e HTML/CSS em ciclos semanais de entrega.</li>
-                  <li>Construí endpoints REST em Python e Flask integrados a banco de dados relacional.</li>
-                  <li>Trabalhei em repositórios colaborativos com Git, branches e code review.</li>
-                  <li>Implementei e mantive soluções em WordPress para demandas internas com prazo definido.</li>
+                  <li data-pt="Desenvolvi interfaces web com JavaScript, TypeScript e HTML/CSS em ciclos semanais de entrega.">I developed web interfaces with JavaScript, TypeScript and HTML/CSS in weekly delivery cycles.</li>
+                  <li data-pt="Construí endpoints REST em Python e Flask integrados a banco de dados relacional.">I built REST endpoints in Python and Flask integrated with a relational database.</li>
+                  <li data-pt="Trabalhei em repositórios colaborativos com Git, branches e code review.">I worked in collaborative repositories with Git, branches and code review.</li>
+                  <li data-pt="Implementei e mantive soluções em WordPress para demandas internas com prazo definido.">I implemented and maintained WordPress solutions for internal requests with fixed deadlines.</li>
                 </ul>
                 <div class="exp-techs">
                   <span class="tech-pill">Python</span>
@@ -583,16 +580,15 @@
                 <div class="exp-head">
                   <div>
                     <div class="exp-company">Engesoftware Tecnologia</div>
-                    <h3>Analista de Requisitos</h3>
+                    <h3 data-pt="Analista de Requisitos">Requirements Analyst</h3>
                     <p class="exp-period">04/2025 — 10/2025</p>
                   </div>
-                  <span class="exp-badge">Estágio</span>
                 </div>
                 <ul class="exp-list">
-                  <li>Levantei e documentei requisitos de mais de 20 funcionalidades em sprints quinzenais.</li>
-                  <li>Traduzi regras de negócio em especificações técnicas consumidas por 3 times de desenvolvimento.</li>
-                  <li>Organizei o backlog no Jira, com priorização por sprint em fluxo Kanban.</li>
-                  <li>Prototipei fluxos de 4 módulos do sistema no Figma, reduzindo retrabalho no front-end.</li>
+                  <li data-pt="Levantei e documentei requisitos de mais de 20 funcionalidades em sprints quinzenais.">I gathered and documented requirements for over 20 features in two-week sprints.</li>
+                  <li data-pt="Traduzi regras de negócio em especificações técnicas consumidas por 3 times de desenvolvimento.">I translated business rules into technical specifications used by 3 development teams.</li>
+                  <li data-pt="Organizei o backlog no Jira, com priorização por sprint em fluxo Kanban.">I organized the backlog in Jira, prioritizing per sprint in a Kanban flow.</li>
+                  <li data-pt="Prototipei fluxos de 4 módulos do sistema no Figma, reduzindo retrabalho no front-end.">I prototyped flows for 4 system modules in Figma, reducing front-end rework.</li>
                 </ul>
               </div>
             </div>
@@ -601,10 +597,10 @@
       </section>
 
       <!-- ========== HABILIDADES ========== -->
-      <section class="section reveal" id="habilidades" data-nav-label="Skills">
+      <section class="section reveal" id="habilidades" data-nav-label="Skills" data-nav-label-pt="Skills">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">03</span> <span>Habilidades</span></h2>
+            <h2><span class="section-index">03</span> <span data-pt="Habilidades">Skills</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">skills.json</span>
           </div>
@@ -612,8 +608,8 @@
           <div class="skills-grid stack-grid">
             <div class="skill-card stack-card stack-card--focus">
               <div class="stack-head">
-                <h3>IA e Visão Computacional</h3>
-                <span class="stack-tag">Foco atual</span>
+                <h3 data-pt="IA e Visão Computacional">AI and Computer Vision</h3>
+                <span class="stack-tag" data-pt="Foco atual">Current focus</span>
               </div>
               <div class="proj-techs">
                 <span class="tech-pill">Python</span>
@@ -623,9 +619,9 @@
                 <span class="tech-pill">Pandas</span>
                 <span class="tech-pill">NumPy</span>
                 <span class="tech-pill">Deep Learning</span>
-                <span class="tech-pill">LLMs e agentes</span>
+                <span class="tech-pill" data-pt="LLMs e agentes">LLMs and agents</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#exp-cnt">Pesquisa CNT de Rodovias</a> · <a href="#proj-factoryflow">FactoryFlow AI</a> · <a href="#proj-lvm">assistente do LVM</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#exp-cnt" data-pt="Pesquisa CNT de Rodovias">CNT Highway Survey</a> · <a href="#proj-factoryflow">FactoryFlow AI</a> · <a href="#proj-lvm" data-pt="assistente do LVM">LVM assistant</a></p>
             </div>
             <div class="skill-card stack-card">
               <div class="stack-head">
@@ -639,7 +635,7 @@
                 <span class="tech-pill">shadcn/ui</span>
                 <span class="tech-pill">Vite</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#proj-lvm">LVM</a> · <a href="#proj-organizador">Organizador de Contas</a> · <a href="#proj-catequistas">App dos Catequistas</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#proj-lvm">LVM</a> · <a href="#proj-organizador" data-pt="Organizador de Contas">Account Organizer</a> · <a href="#proj-catequistas" data-pt="App dos Catequistas">Catechists App</a></p>
             </div>
             <div class="skill-card stack-card">
               <div class="stack-head">
@@ -653,11 +649,11 @@
                 <span class="tech-pill">APIs REST</span>
                 <span class="tech-pill">JWT</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#exp-engesoftware">estágio na Engesoftware</a> · <a href="#proj-anime-finance">Anime Finance</a> · <a href="#proj-task-manager">Task Manager API</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#exp-engesoftware" data-pt="trabalho na Engesoftware">work at Engesoftware</a> · <a href="#proj-anime-finance">Anime Finance</a> · <a href="#proj-task-manager">Task Manager API</a></p>
             </div>
             <div class="skill-card stack-card">
               <div class="stack-head">
-                <h3>Dados</h3>
+                <h3 data-pt="Dados">Data</h3>
               </div>
               <div class="proj-techs">
                 <span class="tech-pill">PostgreSQL</span>
@@ -667,11 +663,11 @@
                 <span class="tech-pill">SQLite</span>
                 <span class="tech-pill">MySQL</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#proj-organizador">Organizador de Contas</a> · <a href="#proj-catequistas">App dos Catequistas</a> · <a href="#proj-anime-finance">Anime Finance</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#proj-organizador" data-pt="Organizador de Contas">Account Organizer</a> · <a href="#proj-catequistas" data-pt="App dos Catequistas">Catechists App</a> · <a href="#proj-anime-finance">Anime Finance</a></p>
             </div>
             <div class="skill-card stack-card">
               <div class="stack-head">
-                <h3>Qualidade e entrega</h3>
+                <h3 data-pt="Qualidade e entrega">Quality and delivery</h3>
               </div>
               <div class="proj-techs">
                 <span class="tech-pill">Vitest</span>
@@ -681,34 +677,30 @@
                 <span class="tech-pill">Git</span>
                 <span class="tech-pill">Vercel</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#proj-lvm">LVM</a> · <a href="#proj-anime-finance">Anime Finance</a> · <a href="#proj-factoryflow">FactoryFlow AI</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#proj-lvm">LVM</a> · <a href="#proj-anime-finance">Anime Finance</a> · <a href="#proj-factoryflow">FactoryFlow AI</a></p>
             </div>
             <div class="skill-card stack-card">
               <div class="stack-head">
-                <h3>Base de computação</h3>
+                <h3 data-pt="Base de computação">Computing foundations</h3>
               </div>
               <div class="proj-techs">
-                <span class="tech-pill">Linguagem C</span>
-                <span class="tech-pill">Ponteiros e memória</span>
-                <span class="tech-pill">Estruturas de dados</span>
+                <span class="tech-pill" data-pt="Linguagem C">C language</span>
+                <span class="tech-pill" data-pt="Ponteiros e memória">Pointers and memory</span>
+                <span class="tech-pill" data-pt="Estruturas de dados">Data structures</span>
               </div>
-              <p class="stack-where">Onde aparece: <a href="#proj-c">Fundamentos em C</a></p>
+              <p class="stack-where"><span data-pt="Onde aparece:">Where it shows up:</span> <a href="#proj-c" data-pt="Fundamentos em C">C Fundamentals</a></p>
             </div>
           </div>
 
-          <p class="stack-extra">
-            Também uso Jira, Figma e WordPress no trabalho, e assistentes de IA (Claude Code, Cursor, GitHub Copilot)
-            sempre revisando o código gerado. Já tive contato com PHP/Laravel, Node.js e AWS, mas ainda não tenho projeto
-            público com eles.
-          </p>
+          <p class="stack-extra" data-pt="Também uso Jira, Figma e WordPress no trabalho, e assistentes de IA (Claude Code, Cursor, GitHub Copilot) sempre revisando o código gerado. Já tive contato com PHP/Laravel, Node.js e AWS, mas ainda não tenho projeto público com eles.">I also use Jira, Figma and WordPress at work, and AI assistants (Claude Code, Cursor, GitHub Copilot), always reviewing the generated code. I've had some exposure to PHP/Laravel, Node.js and AWS, but I don't have a public project with them yet.</p>
         </div>
       </section>
 
       <!-- ========== SOBRE ========== -->
-      <section class="section reveal" id="sobre" data-nav-label="Sobre">
+      <section class="section reveal" id="sobre" data-nav-label="About" data-nav-label-pt="Sobre">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">04</span> <span>Sobre mim</span></h2>
+            <h2><span class="section-index">04</span> <span data-pt="Sobre mim">About me</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">whoami</span>
           </div>
@@ -719,70 +711,59 @@
               <div class="avatar-ring"></div>
 
               <div class="avatar-card" id="identity-photo">
-                <img src="./assets/img/pedro.webp" alt="Foto de Pedro Leite Campos" class="avatar-photo"
+                <img src="./assets/img/pedro.webp" alt="Photo of Pedro Leite Campos" data-pt-alt="Foto de Pedro Leite Campos" class="avatar-photo"
                   width="320" height="320" loading="lazy" decoding="async" />
               </div>
             </div>
             <p class="profile-name">Pedro Leite Campos</p>
-            <p class="profile-role">IA e Visão Computacional</p>
+            <p class="profile-role" data-pt="IA e Visão Computacional">AI and Computer Vision</p>
 
             <div class="profile-stats">
               <div class="stat-item">
                 <div class="stat-num">2</div>
-                <div class="stat-lbl">Empresas</div>
+                <div class="stat-lbl" data-pt="Empresas">Companies</div>
               </div>
               <div class="stat-item">
                 <div class="stat-num">7</div>
-                <div class="stat-lbl">Projetos no ar</div>
+                <div class="stat-lbl" data-pt="Projetos no ar">Live projects</div>
               </div>
               <div class="stat-item">
                 <div class="stat-num">12</div>
-                <div class="stat-lbl">Cursos</div>
+                <div class="stat-lbl" data-pt="Cursos">Courses</div>
               </div>
             </div>
           </aside>
 
           <div class="about-box">
             <div class="about-text">
-              <p>
-                Estudo Ciência da Computação no IESB (2025–2028). Comecei como analista de requisitos na Engesoftware,
-                onde aprendi a entender o problema antes de escrever a primeira linha de código, e depois passei a
-                desenvolvedor fullstack.
-              </p>
-              <p>
-                Hoje meu foco é IA e visão computacional. Sou estagiário na CNT, onde treino modelos com YOLO e PyTorch
-                para a Pesquisa CNT de Rodovias e trato os dados com Pandas, NumPy e OpenCV. Comecei há pouco nessa
-                área e é nela que quero crescer, sem abrir mão da base fullstack para levar os modelos até quem usa.
-              </p>
-              <p>
-                Também desenvolvo sites e sistemas para clientes reais pela <strong class="about-highlight">Leite Campos
-                Consultoria</strong>, empresa da minha família.
-              </p>
+              <p data-pt="Estudo Ciência da Computação no IESB (2025–2028). Comecei como analista de requisitos na Engesoftware, onde aprendi a entender o problema antes de escrever a primeira linha de código, e depois passei a desenvolvedor fullstack.">I study Computer Science at IESB (2025–2028). I started as a requirements analyst at Engesoftware, where I learned to understand the problem before writing the first line of code, and later moved into fullstack development.</p>
+              <p data-pt="Hoje meu foco é IA e visão computacional. Na CNT, treino modelos com YOLO e PyTorch para a Pesquisa CNT de Rodovias e trato os dados com Pandas, NumPy e OpenCV. Comecei há pouco nessa área e é nela que quero crescer, sem abrir mão da base fullstack para levar os modelos até quem usa.">Today my focus is AI and computer vision. At CNT, I train models with YOLO and PyTorch for the CNT Highway Survey and handle the data with Pandas, NumPy and OpenCV. I started in this field only recently and it's where I want to grow, without giving up the fullstack foundation that takes models to the people who use them.</p>
+              <p data-pt-html="Também desenvolvo sites e sistemas para clientes reais pela &lt;strong class=&quot;about-highlight&quot;&gt;Leite Campos Consultoria&lt;/strong&gt;, empresa da minha família.">I also build websites and systems for real clients through <strong class="about-highlight">Leite Campos Consultoria</strong>, my family's company.</p>
             </div>
 
             <div class="about-flow">
               <div class="flow">
-                <span class="flow-label">// como eu trabalho</span>
+                <span class="flow-label" data-pt="// como eu trabalho">// how I work</span>
                 <ol class="flow-steps">
                   <li>
                     <span class="flow-num">01</span>
-                    <span class="flow-title">Entender</span>
-                    <span class="flow-desc">Escuto o problema antes de propor solução</span>
+                    <span class="flow-title" data-pt="Entender">Understand</span>
+                    <span class="flow-desc" data-pt="Escuto o problema antes de propor solução">I listen to the problem before proposing a solution</span>
                   </li>
                   <li>
                     <span class="flow-num">02</span>
-                    <span class="flow-title">Mapear</span>
-                    <span class="flow-desc">Traduzo em requisitos e critérios claros</span>
+                    <span class="flow-title" data-pt="Mapear">Map</span>
+                    <span class="flow-desc" data-pt="Traduzo em requisitos e critérios claros">I turn it into clear requirements and criteria</span>
                   </li>
                   <li>
                     <span class="flow-num">03</span>
-                    <span class="flow-title">Construir</span>
-                    <span class="flow-desc">Entrego em partes pequenas e versionadas</span>
+                    <span class="flow-title" data-pt="Construir">Build</span>
+                    <span class="flow-desc" data-pt="Entrego em partes pequenas e versionadas">I ship in small, versioned pieces</span>
                   </li>
                   <li>
                     <span class="flow-num">04</span>
-                    <span class="flow-title">Iterar</span>
-                    <span class="flow-desc">Meço o resultado e ajusto o que não serviu</span>
+                    <span class="flow-title" data-pt="Iterar">Iterate</span>
+                    <span class="flow-desc" data-pt="Meço o resultado e ajusto o que não serviu">I measure the result and fix what didn't work</span>
                   </li>
                 </ol>
               </div>
@@ -792,10 +773,10 @@
       </section>
 
       <!-- ========== FORMAÇÃO & CERTIFICAÇÕES ========== -->
-      <section class="section reveal" id="formacao" data-nav-label="Formação">
+      <section class="section reveal" id="formacao" data-nav-label="Education" data-nav-label-pt="Formação">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">05</span> <span>Formação</span></h2>
+            <h2><span class="section-index">05</span> <span data-pt="Formação">Education</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">README.md</span>
           </div>
@@ -809,55 +790,55 @@
                     <path d="M10 2L2 6.5l8 4 8-4L10 2zM2 13.5l8 4 8-4M2 10l8 4 8-4"></path>
                   </svg>
                 </div>
-                <h3>Formação Acadêmica</h3>
+                <h3 data-pt="Formação Acadêmica">Academic Background</h3>
               </div>
 
               <div class="edu-entry">
-                <div class="edu-inst">🎓 Centro Universitário IESB</div>
-                <div class="edu-detail">Bacharelado em Ciência da Computação · 2025 – 2028</div>
+                <div class="edu-inst" data-pt="🎓 Centro Universitário IESB">🎓 IESB University Center</div>
+                <div class="edu-detail" data-pt="Bacharelado em Ciência da Computação · 2025 – 2028">Bachelor's in Computer Science · 2025 – 2028</div>
               </div>
 
               <div class="edu-entry">
-                <div class="edu-inst">🏛️ Colégio Militar Dom Pedro II</div>
-                <div class="edu-detail">Ensino Fundamental e Médio · 2013 – 2024</div>
+                <div class="edu-inst" data-pt="🏛️ Colégio Militar Dom Pedro II">🏛️ Dom Pedro II Military School</div>
+                <div class="edu-detail" data-pt="Ensino Fundamental e Médio · 2013 – 2024">Primary and Secondary Education · 2013 – 2024</div>
               </div>
 
               <div class="edu-entry edu-entry-no-border">
-                <div class="edu-inst edu-inst-muted">🌐 Idiomas</div>
-                <div class="edu-detail">Português · Nativo &nbsp;&nbsp; Inglês · Intermediário (cursando no CILG)</div>
+                <div class="edu-inst edu-inst-muted" data-pt="🌐 Idiomas">🌐 Languages</div>
+                <div class="edu-detail" data-pt-html="Português · Nativo &amp;nbsp;&amp;nbsp; Inglês · Intermediário (cursando no CILG)">Portuguese · Native &nbsp;&nbsp; English · Intermediate (studying at CILG)</div>
               </div>
             </div>
 
             <div class="edu-card">
               <div class="edu-card-head">
-                <h3>Cursos complementares</h3>
+                <h3 data-pt="Cursos complementares">Additional courses</h3>
               </div>
 
               <ul class="course-list">
-                <li><strong>Python</strong> — primeira aplicação; orientação a objetos e consumo de API <span class="course-src">Alura</span></li>
+                <li data-pt-html="&lt;strong&gt;Python&lt;/strong&gt; — primeira aplicação; orientação a objetos e consumo de API &lt;span class=&quot;course-src&quot;&gt;Alura&lt;/span&gt;"><strong>Python</strong> — first application; object orientation and API consumption <span class="course-src">Alura</span></li>
                 <li><strong>JavaScript / TypeScript</strong> <span class="course-src">Udemy</span></li>
-                <li><strong>Git e GitHub</strong> — colaboração em projetos <span class="course-src">Alura</span></li>
+                <li data-pt-html="&lt;strong&gt;Git e GitHub&lt;/strong&gt; — colaboração em projetos &lt;span class=&quot;course-src&quot;&gt;Alura&lt;/span&gt;"><strong>Git and GitHub</strong> — collaboration on projects <span class="course-src">Alura</span></li>
                 <li><strong>Claude Code</strong> — Claude 101, Claude Code, Claude Code in Action <span class="course-src">Anthropic</span></li>
-                <li><strong>Fundamentos</strong> — algoritmos, pensamento computacional, redes, Linux <span class="course-src">Udemy · Alura</span></li>
+                <li data-pt-html="&lt;strong&gt;Fundamentos&lt;/strong&gt; — algoritmos, pensamento computacional, redes, Linux &lt;span class=&quot;course-src&quot;&gt;Udemy · Alura&lt;/span&gt;"><strong>Fundamentals</strong> — algorithms, computational thinking, networking, Linux <span class="course-src">Udemy · Alura</span></li>
               </ul>
-              <p class="course-wip">Em andamento: Visão Computacional: reconhecimento de texto com OCR e OpenCV e JAVAI (Alura); inglês no CILG.</p>
+              <p class="course-wip" data-pt="Em andamento: Visão Computacional: reconhecimento de texto com OCR e OpenCV e JAVAI (Alura); inglês no CILG.">In progress: Computer Vision: text recognition with OCR and OpenCV, and JAVAI (Alura); English at CILG.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- ========== CONTATO ========== -->
-      <section class="section reveal" id="contato" data-nav-label="Contato">
+      <section class="section reveal" id="contato" data-nav-label="Contact" data-nav-label-pt="Contato">
         <div class="container">
           <div class="section-head">
-            <h2><span class="section-index">06</span> <span>Contato</span></h2>
+            <h2><span class="section-index">06</span> <span data-pt="Contato">Contact</span></h2>
             <div class="section-line"></div>
             <span class="section-tag">ping me</span>
           </div>
 
           <div class="contact-wrap">
             <div class="contact-text">
-              <p>Aberto a oportunidades em IA e visão computacional (Python, PyTorch). E-mail ou WhatsApp são os caminhos mais rápidos.</p>
+              <p data-pt="Aberto a oportunidades em IA e visão computacional (Python, PyTorch). E-mail ou WhatsApp são os caminhos mais rápidos.">Open to opportunities in AI and computer vision (Python, PyTorch). Email or WhatsApp are the fastest ways to reach me.</p>
 
               <div class="contact-links">
                 <a class="contact-link" href="mailto:pleitecampos@gmail.com">
@@ -884,14 +865,12 @@
             </div>
 
             <div class="contact-right">
-              <h3>Vamos conversar sobre oportunidades</h3>
-              <a class="cta-open" href="mailto:pleitecampos@gmail.com">
-                Enviar e-mail agora
-              </a>
+              <h3 data-pt="Vamos conversar sobre oportunidades">Let's talk about opportunities</h3>
+              <a class="cta-open" href="mailto:pleitecampos@gmail.com" data-pt="Enviar e-mail agora">Send an email now</a>
 
               <div class="availability-tag">
                 <span class="dot"></span>
-                Aberto a oportunidades em IA e visão computacional
+                <span data-pt="Aberto a oportunidades em IA e visão computacional">Open to opportunities in AI and computer vision</span>
               </div>
             </div>
           </div>
@@ -907,7 +886,7 @@
     </footer>
   </div>
 
-  <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" data-pt-aria-label="Voltar ao topo">
     ↑
   </button>
 

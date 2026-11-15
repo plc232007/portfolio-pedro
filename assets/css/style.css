@@ -254,6 +254,50 @@ body.light-theme .header.scrolled {
   width: 100%;
 }
 
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* Seletor de idioma: EN | PT, com o idioma ativo em destaque. */
+.lang-toggle {
+  height: 42px;
+  padding: 0 0.35rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-h);
+  background: var(--surface);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 8px 25px rgba(0, 200, 255, 0.2);
+}
+
+.lang-opt {
+  padding: 0.3rem 0.45rem;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-opt.is-active {
+  background: var(--cyan);
+  color: #04110a;
+}
+
 .theme-toggle {
   width: 42px;
   height: 42px;
