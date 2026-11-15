@@ -109,16 +109,6 @@ input:focus-visible {
 }
 
 /* FUNDO */
-#particles-js {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
 body::after {
   content: "";
   position: fixed;
@@ -360,30 +350,6 @@ body.light-theme .header.scrolled {
   align-items: center;
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(0, 200, 255, 0.12);
-  border: 1px solid var(--border-h);
-  border-radius: 999px;
-  padding: 0.4rem 1rem;
-  font-size: 0.78rem;
-  color: var(--cyan);
-  letter-spacing: 0.05em;
-  margin-bottom: 1.2rem;
-  animation: fadeSlideDown 0.6s ease both;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.15);
-  transition: all 0.3s ease;
-}
-
-.hero-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(0, 200, 255, 0.25);
-}
-
-.hero-badge .dot,
 .availability-tag .dot {
   width: 8px;
   height: 8px;
@@ -555,10 +521,6 @@ body.light-theme .hero-intro {
   width: 110px;
   height: 110px;
   margin: 0 auto 1rem;
-}
-
-.avatar-wrap input[type="file"] {
-  display: none;
 }
 
 .avatar-ring {
@@ -808,31 +770,6 @@ body.light-theme .about-text {
   font-weight: 700;
 }
 
-.skill-card ul {
-  list-style: none;
-}
-
-.skill-card ul li {
-  font-size: 0.82rem;
-  color: var(--muted);
-  padding: 0.25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-body.light-theme .skill-card ul li {
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
-}
-
-.skill-card ul li::before {
-  content: "›";
-  color: var(--cyan);
-  font-size: 1rem;
-  flex-shrink: 0;
-}
-
 /* TIMELINE */
 .timeline {
   position: relative;
@@ -924,24 +861,6 @@ body.light-theme .skill-card ul li {
   color: var(--cyan);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-}
-
-.exp-badge {
-  font-size: 0.7rem;
-  background: rgba(57, 255, 138, 0.12);
-  border: 1px solid rgba(57, 255, 138, 0.35);
-  color: var(--green);
-  border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(57, 255, 138, 0.1);
-}
-
-.exp-badge:hover {
-  background: rgba(57, 255, 138, 0.2);
-  box-shadow: 0 0 20px rgba(57, 255, 138, 0.2);
-  transform: scale(1.05);
 }
 
 .exp-period {
@@ -1544,11 +1463,6 @@ body.light-theme .back-to-top {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* RESPONSIVO */

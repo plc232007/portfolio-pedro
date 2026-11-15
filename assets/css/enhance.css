@@ -380,3 +380,15 @@ body::after {
   text-shadow: 0 0 18px rgba(0, 200, 255, 0.35);
 }
 
+
+/* Seções abaixo do hero só são calculadas e pintadas quando chegam perto da tela.
+   O "auto" em contain-intrinsic-size guarda a altura real depois da primeira vez, então a rolagem não pula. */
+main > .section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+  scroll-margin-top: 3.5rem; /* o título da seção não fica escondido sob o header fixo */
+}
+
+@media (max-width: 600px) {
+  main > .section { scroll-margin-top: 5.5rem; } /* no celular o header tem duas linhas */
+}
