@@ -34,10 +34,38 @@
   const run = () => { if (raf === null) raf = requestAnimationFrame(tick); };
   const reset = () => { Object.assign(target, REST); run(); };
 
+  // Textos dinâmicos nos dois idiomas; window.i18n.lang diz qual está ativo.
+  const lang = () => (window.i18n && window.i18n.lang) || 'en';
+  const TEXT = {
+    en: {
+      hintMouse: 'Move your mouse. Explore the objects.',
+      hintTouch: 'Tap or select the objects to explore.',
+      cvPath: 'yolo@cnt: ~/highway-survey',
+      cvLabel: 'Monitor: computer vision on the CNT Highway Survey',
+      monitorLabel: title => `Monitor: see ${title}`,
+      summaries: [
+        'Interactive geometry with seed-generated exercises and an AI assistant.',
+        'Personal finance in Next.js with per-user data isolation via RLS.',
+        'Offline PWA for a catechesis class, with Aquino, an AI assistant.'
+      ]
+    },
+    pt: {
+      hintMouse: 'Mova o mouse. Explore os objetos.',
+      hintTouch: 'Toque ou selecione os objetos para explorar.',
+      cvPath: 'yolo@cnt: ~/rodovias',
+      cvLabel: 'Monitor: visão computacional na Pesquisa CNT de Rodovias',
+      monitorLabel: title => `Monitor: conhecer ${title}`,
+      summaries: [
+        'Geometria interativa com exercícios gerados por semente e assistente de IA.',
+        'Finanças pessoais em Next.js com dados isolados por usuário via RLS.',
+        'PWA offline da turma de catequese, com o Aquino, um assistente de IA.'
+      ]
+    }
+  };
+  const tx = () => TEXT[lang()];
+
   const updateHint = () => {
-    document.getElementById('workspace-hint').textContent = interactive()
-      ? 'Mova o mouse. Explore os objetos.'
-      : 'Toque ou selecione os objetos para explorar.';
+    document.getElementById('workspace-hint').textContent = interactive() ? tx().hintMouse : tx().hintTouch;
     reset();
   };
   updateHint();
@@ -72,14 +100,9 @@
   // Monitor: primeiro a demo de visão computacional, depois os projetos em destaque.
   // Título e link vêm dos cards reais para o monitor nunca divergir da seção de projetos.
   const cards = [...document.querySelectorAll('#projetos .proj-card')];
-  const featuredNames = ['LVM', 'Organizador de Contas', 'Portal do Aluno'];
-  const summaries = [
-    'Geometria interativa com exercícios gerados por semente e assistente de IA.',
-    'Finanças pessoais em Next.js com dados isolados por usuário via RLS.',
-    'PWA offline da turma de catequese, com o Aquino, um assistente de IA.'
-  ];
-  const projects = featuredNames
-    .map((name, index) => ({ card: cards.find(card => card.querySelector('h3')?.textContent.includes(name)), summary: summaries[index] }))
+  const featuredIds = ['proj-lvm', 'proj-organizador', 'proj-portal-aluno'];
+  const projects = featuredIds
+    .map((id, index) => ({ card: cards.find(card => card.id === id), index }))
     .filter(item => item.card);
 
   const monitor = document.getElementById('desk-monitor');
@@ -90,7 +113,6 @@
   const title = document.getElementById('screen-title');
   const description = document.getElementById('screen-description');
   const next = document.getElementById('workspace-next');
-  const cvLabel = monitor.getAttribute('aria-label');
   let slide = 0;
 
   function showSlide() {
@@ -99,19 +121,19 @@
     cvView.hidden = !isCv;
     projectView.hidden = isCv;
     if (isCv) {
-      path.textContent = 'yolo@cnt: ~/rodovias';
+      path.textContent = tx().cvPath;
       monitor.href = '#exp-cnt';
-      monitor.setAttribute('aria-label', cvLabel);
+      monitor.setAttribute('aria-label', tx().cvLabel);
       return;
     }
-    const { card, summary } = projects[slide - 1];
+    const { card, index } = projects[slide - 1];
     const fullTitle = card.querySelector('h3').textContent.trim();
     path.textContent = 'pedro@portfolio: ~/projects';
     title.textContent = fullTitle.split(' — ')[0];
-    description.textContent = summary;
+    description.textContent = tx().summaries[index];
     document.getElementById('screen-number').textContent = String(slide).padStart(2, '0');
     monitor.href = `#${card.id}`;
-    monitor.setAttribute('aria-label', `Monitor: conhecer ${fullTitle}`);
+    monitor.setAttribute('aria-label', tx().monitorLabel(fullTitle));
   }
 
   // Treino simulado no terminal dos projetos; sem animação, fica na última época.
@@ -131,6 +153,10 @@
     setTimeout(train, step === EPOCHS ? 2500 : 700);
   }
   if (epoch && !reduced.matches) train();
+
+  // Troca de idioma: refaz os textos que o JS escreve (o resto o i18n.js já trocou).
+  document.addEventListener('langchange', () => { updateHint(); showSlide(); });
+  showSlide();
 
   next.hidden = projects.length === 0;
   screen.setAttribute('aria-live', 'polite');

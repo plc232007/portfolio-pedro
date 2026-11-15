@@ -1,8 +1,8 @@
 # Pedro Leite Campos | Portfólio
 
-Portfólio de Pedro Leite Campos: IA e visão computacional com Python (PyTorch, YOLO, OpenCV), com base fullstack em React/Next.js.
+Portfólio de Pedro Leite Campos (inglês por padrão, com botão para português): IA e visão computacional com Python (PyTorch, YOLO, OpenCV), com base fullstack em React/Next.js.
 
-**No ar:** https://plc232007.github.io/portifolio-pedro/
+**No ar:** https://plc232007.github.io/portfolio-pedro/
 
 ## Decisões técnicas
 
@@ -28,6 +28,7 @@ index.html
 assets/css/style.css      base: tema, layout e componentes
 assets/css/enhance.css    revelação por scroll, navegação lateral, fundo
 assets/css/workspace.css  mesa do hero, projetos, stack e formação
+assets/js/i18n.js         idioma (EN padrão, PT opcional) via atributos data-pt*
 assets/js/script.js       tema, voltar ao topo, header
 assets/js/interactions.js revelação por scroll, progresso, navegação lateral
 assets/js/workspace.js    perspectiva da mesa e monitor com os projetos em destaque

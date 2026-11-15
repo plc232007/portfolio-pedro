@@ -102,16 +102,28 @@
     const sections = Array.from(document.querySelectorAll("main section[id]"));
     if (!sections.length) return;
 
+    const isPt = () => window.i18n && window.i18n.lang === "pt";
+    const labelOf = (section) =>
+      (isPt() && section.dataset.navLabelPt) || section.dataset.navLabel || section.id;
+
     const dots = sections.map((section) => {
-      const label = section.dataset.navLabel || section.id;
       const dot = document.createElement("a");
       dot.className = "section-dot";
       dot.href = `#${section.id}`;
-      dot.setAttribute("aria-label", `Ir para ${label}`);
-      dot.innerHTML = `<span class="section-dot-mark"></span><span class="section-dot-label">${label}</span>`;
+      dot.innerHTML = `<span class="section-dot-mark"></span><span class="section-dot-label"></span>`;
       nav.appendChild(dot);
       return dot;
     });
+
+    const renderLabels = () => {
+      sections.forEach((section, i) => {
+        const label = labelOf(section);
+        dots[i].setAttribute("aria-label", isPt() ? `Ir para ${label}` : `Go to ${label}`);
+        dots[i].querySelector(".section-dot-label").textContent = label;
+      });
+    };
+    renderLabels();
+    document.addEventListener("langchange", renderLabels);
 
     const observer = new IntersectionObserver(
       (entries) => {
